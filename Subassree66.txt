@@ -1,0 +1,65 @@
+
+"A curated collection of README files for personal projects, including best practices, structured formats, and professional templates for GitHub repositories."
+
+# Hi there 👋 I'm Subassree S
+
+🚀 **About Me**  
+I am an aspiring AI/ML Engineer and software enthusiast. I love building AI-powered applications, solving real-world problems, and creating efficient, clean, and impactful code.
+
+---
+
+💻 **Tech Stack and Frameworks**
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
+![YOLOv8](https://img.shields.io/badge/YOLOv8-FF6600?style=for-the-badge&logo=appveyor&logoColor=white)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+![VSCode](https://img.shields.io/badge/VSCode-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+
+---
+
+🌐 **Connect with Me**
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/your-linkedin-profile)  
+[![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=white)](https://leetcode.com/your-profile)  
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:your.email@example.com)  
+
+---
+
+## 🔧 Projects & Highlights
+
+1. **Smart Waste Management System**  
+   - YOLOv8-based real-time waste detection and segregation  
+   - ESP32 & IoT integration for bin alerts  
+
+2. **Voice-enabled Education Chatbot**  
+   - Flask backend with Ollama LLM for voice input/output  
+   - Text summarization and interactive Q&A  
+
+3. **AI-powered HR Assistant**  
+   - Dashboard for candidate tracking and analytics  
+   - Resume ATS scoring and interview scheduling  
+
+4. **Traffic Sign Detection**  
+   - CNN-based traffic sign classification  
+   - Shape, color, and text recognition  
+
+---
+
+## ⚡ Skills
+
+- **Programming Languages:** Python, Java, C, HTML, CSS, JavaScript  
+- **Machine Learning & AI:** CNN, YOLOv8, NLP, LSTM  
+- **Frameworks & Tools:** Flask, FastAPI, React, TensorFlow, PyTorch, MongoDB  
+- **Version Control & Collaboration:** Git, GitHub  
+- **Soft Skills:** Logical Thinking, Problem Solving, Analytical Skills, Team Collaboration  
+
+---
+
+> “Strive for continuous improvement, not perfection.” – Subassree S

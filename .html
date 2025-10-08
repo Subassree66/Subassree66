@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Subassree S | AI/ML Engineer Portfolio</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Typed.js -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+  <style>
+    :root {
+      --bg: #f9f9f9;
+      --text: #222;
+      --primary: #003366;
+      --accent: #0078ff;
+      --card: #fff;
+    }
+    [data-theme="dark"] {
+      --bg: #0f172a;
+      --text: #f8fafc;
+      --primary: #60a5fa;
+      --accent: #38bdf8;
+      --card: #1e293b;
+    }
+
+    * {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif;}
+    html {scroll-behavior: smooth;}
+    body {background: var(--bg); color: var(--text); transition: 0.4s ease;}
+
+    /* Navbar */
+    nav {
+      position: sticky;
+      top: 0;
+      background: var(--card);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      z-index: 10;
+    }
+    nav .nav-links a {
+      color: var(--text);
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    nav .nav-links a:hover,
+    nav .nav-links a.active {
+      color: var(--accent);
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 3px;
+    }
+    .theme-toggle {cursor: pointer; font-size: 1.6rem; margin-left: 1rem;}
+
+    /* Hero */
+    header {
+      text-align: center;
+      padding: 4rem 1rem 3rem;
+      background: var(--primary);
+      color: #fff;
+    }
+    header h1 {font-size: 2.6rem; margin-bottom: 0.5rem;}
+    header .buttons {margin-top: 1.5rem;}
+    header .buttons a {
+      background: var(--accent);
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: 0.3s;
+      margin: 0 6px;
+      display: inline-block;
+      font-weight: 500;
+    }
+    header .buttons a:hover {background: #ffcc00; color: #000;}
+
+    /* Sections */
+    section {padding: 3rem 2rem; max-width: 1100px; margin: auto;}
+    h2 {
+      color: var(--primary);
+      border-left: 4px solid var(--accent);
+      padding-left: 12px;
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+    }
+    p, li {line-height: 1.7; font-size: 1rem;}
+    ul {margin-left: 1.5rem;}
+
+    /* Projects */
+    .project-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 2rem;
+    }
+    .project-card {
+      position: relative;
+      background: var(--card);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+      padding-bottom: 1rem;
+      text-align: left;
+    }
+    .project-card:hover {transform: translateY(-6px);}
+    .project-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-bottom: 2px solid var(--accent);
+    }
+    .project-card h3 {
+      color: var(--primary);
+      font-size: 1.2rem;
+      margin: 0.8rem 1rem 0.5rem;
+    }
+    .project-card p {
+      margin: 0 1rem;
+      font-size: 0.95rem;
+      text-align: justify;
+    }
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: 0.3s;
+    }
+    .project-card:hover .overlay {opacity: 1;}
+    .overlay a {
+      color: #fff;
+      background: var(--accent);
+      padding: 8px 16px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    /* Back to top */
+    #topBtn {
+      position: fixed;
+      bottom: 20px; right: 25px;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      padding: 12px;
+      font-size: 1.3rem;
+      cursor: pointer;
+      display: none;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+
+    footer {
+      text-align: center;
+      background: #001f3f;
+      color: #fff;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div><b>Subassree Shanmugam</b></div>
+    <div class="nav-links">
+      <a href="#about" class="nav-link active">About</a>
+      <a href="#education" class="nav-link">Education</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#internships" class="nav-link">Internships</a>
+      <a href="#achievements" class="nav-link">Achievements</a>
+      <a href="#contact" class="nav-link">Contact</a>
+      <i class="ri-sun-line theme-toggle" id="themeIcon"></i>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header>
+    <h1>Hi, I'm <span style="color:#ffcc00;">Subassree Shanmugam</span></h1>
+    <p><span id="typed"></span></p>
+    <div class="buttons">
+      <a href="https://github.com/Subassree66" target="_blank"><i class="ri-github-fill"></i> GitHub</a>
+      <a href="SUBASSREE_RESUME.pdf" download><i class="ri-file-download-line"></i> Download Resume</a>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section id="about" data-aos="fade-up">
+    <h2>About Me</h2>
+    <p>
+      I’m <b>Subassree Shanmugam</b>, an aspiring <b>AI/ML Engineer</b> passionate about building intelligent systems that solve real-world problems.
+      I’m currently pursuing <b>B.E. Computer Science and Engineering (AI & ML)</b> at <b>Dr. Mahalingam College of Engineering and Technology</b>.
+    </p>
+    <p>
+      I enjoy exploring <b>Machine Learning, Deep Learning, Computer Vision, and IoT</b> to create meaningful, innovative solutions. Whether it’s automating waste segregation, developing intelligent chatbots, or applying AI for traffic safety, I love bringing ideas to life.
+    </p>
+    <p>
+      Apart from coding, I’m deeply curious about emerging technologies, actively participate in hackathons, and enjoy collaborating on innovative projects that make a real impact.
+    </p>
+  </section>
+
+  <!-- Education -->
+  <section id="education" data-aos="fade-right">
+    <h2>Education</h2>
+    <ul>
+      <li><b>Dr. Mahalingam College of Engineering and Technology</b> – B.E. CSE (AI & ML)  
+      <i>2023 – 2027 | CGPA: 8.56</i><br>
+      Focused on machine learning, AI system design, and real-world projects involving intelligent automation.</li><br>
+      <li><b>Vivek Vidyalaya Matric Higher Secondary School</b> – HSC & SSLC  
+      <i>2021 – 2023 | 83%</i><br>
+      Strengthened my logical and mathematical foundation that fuels my problem-solving approach in AI and programming.</li>
+    </ul>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" data-aos="fade-left">
+    <h2>Skills</h2>
+    <ul>
+      <li><b>Programming Languages:</b> Python, C/C++, Java, HTML, CSS</li>
+      <li><b>Machine Learning & AI:</b> Deep Learning, Computer Vision, NLP, Model Deployment, Data Preprocessing</li>
+      <li><b>Tools & Frameworks:</b> Flask, YOLOv8, TensorFlow, Scikit-learn, Git/GitHub, Figma, FlutterFlow</li>
+      <li><b>Web & App Development:</b> Flask, Flutter, Front-End Design</li>
+      <li><b>Databases:</b> SQL, Excel</li>
+      <li><b>Soft Skills:</b> Logical Thinking, Problem Solving, Collaboration, Adaptability, Research & Experimentation</li>
+    </ul>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" data-aos="fade-up">
+    <h2>Projects</h2>
+    <div class="project-gallery">
+      <div class="project-card" data-aos="zoom-in">
+        <div class="overlay"><a href="#">View Project</a></div>
+        <h3>♻ Smart Waste Management System (YOLOv8 + IoT)</h3>
+        <p>Developed a real-time waste segregation prototype integrating <b>YOLOv8</b> with <b>ESP32-based IoT sensors</b>.
+        Classifies waste types automatically and triggers servo-based sorting. Awarded at <b>Smartathon’24 Hackathon</b>.</p>
+      </div>
+
+      <div class="project-card" data-aos="zoom-in">
+        <div class="overlay"><a href="#">View Project</a></div>
+        <h3>🎙 Voice-enabled Smart Education Chatbot (Flask + Ollama)</h3>
+        <p>Created a <b>Flask-based chatbot</b> using <b>Ollama LLM</b> with <b>voice interaction</b> via Speech-to-Text and Text-to-Speech APIs, enhancing accessibility in education.</p>
+      </div>
+
+      <div class="project-card" data-aos="zoom-in">
+        <div class="overlay"><a href="#">View Project</a></div>
+        <h3>🚦 Traffic Sign Detection System (CNN)</h3>
+        <p>Designed a <b>Convolutional Neural Network</b> for detecting and classifying road signs to improve autonomous vehicle safety and decision-making.</p>
+      </div>
+
+      <div class="project-card" data-aos="zoom-in">
+        <div class="overlay"><a href="#">View Project</a></div>
+        <h3>🚆 Train Traffic Scheduling App</h3>
+        <p>Built an <b>AI-driven scheduling application</b> that automates multi-train traffic coordination, conflict resolution, and lane allocation logic for Indian Railways.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Internships -->
+  <section id="internships" data-aos="fade-right">
+    <h2>Internships</h2>
+    <ul>
+      <li><b>Orcus Info</b> (June – July 2025) – Contributed to <b>AI-powered HR tools</b> for resume screening and skill matching. Improved model accuracy through data-driven optimization.</li><br>
+      <li><b>BK Enterprises</b> (June – July 2024) – Designed and prototyped user-friendly mobile interfaces using <b>Figma</b> and <b>FlutterFlow</b>, focusing on usability and responsive design.</li>
+    </ul>
+  </section>
+
+  <!-- Achievements -->
+  <section id="achievements" data-aos="fade-left">
+    <h2>Achievements & Certifications</h2>
+    <ul>
+      <li>🏆 <b>Winner – Smartathon’24 Hackathon</b> for AI-based waste segregation under the sustainability category.</li>
+      <li>🏅 <b>Ms. HackXelerate – HackXelerate’25</b> recognized for innovative AI/ML project development.</li>
+      <li>🎓 <b>Cambridge English Linguaskill Certification</b> showcasing strong English proficiency.</li>
+      <li>💻 <b>PrepInsta HTML & CSS Certification</b> demonstrating solid web development fundamentals.</li>
+    </ul>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" data-aos="fade-up">
+    <h2>Contact</h2>
+    <p>Interested in collaborating, discussing AI ideas, or exploring internship opportunities? Let’s connect and create something impactful together.</p>
+    <p>📧 <a href="mailto:subassree.6616@gmail.com">subassree.6616@gmail.com</a></p>
+    <p>🔗 <a href="http://www.linkedin.com/in/subassree-shamugam-8260a7304" target="_blank">LinkedIn</a> | <a href="https://github.com/Subassree66" target="_blank">GitHub</a></p>
+  </section>
+
+  <button id="topBtn"><i class="ri-arrow-up-line"></i></button>
+
+  <footer>
+    <p>© 2025 Subassree S | Built with ❤️ using HTML, CSS & JS</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Typed.js
+    const typed = new Typed("#typed", {
+      strings: ["Aspiring AI/ML Engineer", "Deep Learning Enthusiast", "Problem Solver", "Tech Innovator"],
+      typeSpeed: 60,
+      backSpeed: 40,
+      loop: true
+    });
+
+    // Theme Toggle
+    const icon = document.getElementById("themeIcon");
+    icon.addEventListener("click", () => {
+      document.body.dataset.theme = document.body.dataset.theme === "dark" ? "" : "dark";
+      icon.className = document.body.dataset.theme === "dark" ? "ri-moon-line theme-toggle" : "ri-sun-line theme-toggle";
+    });
+
+    // Active Section Highlight
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav-link");
+    window.addEventListener("scroll", () => {
+      let current = "";
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        if (scrollY >= sectionTop) current = section.getAttribute("id");
+      });
+      navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + current) link.classList.add("active");
+      });
+    });
+
+    // Back-to-top
+    const topBtn = document.getElementById("topBtn");
+    window.onscroll = function() {
+      topBtn.style.display = window.scrollY > 300 ? "block" : "none";
+    };
+    topBtn.onclick = () => window.scrollTo({top: 0, behavior: "smooth"});
+
+    // AOS Animation Init
+    AOS.init({duration: 800});
+  </script>
+</body>
+</html>
